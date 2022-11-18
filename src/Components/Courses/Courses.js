@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -44,15 +44,13 @@ function Courses() {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
 
-  const courseList = [];
-
   useEffect(() => {
     if (loading) {
       // maybe trigger a loading screen
       return;
     }
     if (user) navigate("/dashboard");
-  }, [user, loading]);
+  }, [navigate, user, loading]);
 
   return (
     <div className="courses">
