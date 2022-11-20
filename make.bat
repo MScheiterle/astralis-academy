@@ -26,7 +26,6 @@ if exist "./src/Components/%~2/" (
         "          return;"
         "       }"
         "       if (!user) return navigate("/homepage");"
-        "       fetchUserName();"
         "   }, [user, loading]);"
         echo.
         "   return ("
