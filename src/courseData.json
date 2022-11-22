@@ -6,7 +6,7 @@
   },
   "Addition": {
     "shape": "hexa",
-    "tier": 4,
+    "tier": 1,
     "fontAwesomeString": "fa-solid fa-plus",
     "altSymbol": "",
     "status": "done",

@@ -32,32 +32,29 @@ function Course(props) {
   }
 
   return (
-    <div id={props.subject}>
-      <div
-        class={
-          "button" +
-          (props.status === "active"
-            ? " active"
-            : props.status === "done"
-            ? " done"
-            : props.status === "upcoming"
-            ? " upcoming"
-            : "") +
-          (props.shape === "hexa"
-            ? " Hexagon"
-            : props.shape === "octa"
-            ? " Octagon"
-            : props.shape === "deca"
-            ? " Decagon"
-            : "")
-        }
-        style={props.style}
-      >
-        {polys}
-        <span>{props.inner}</span>
-        <div class="glow"></div>
-      </div>
-      <div class="backgroundPoly" style={props.style} />
+    <div
+      class={
+        "button" +
+        (props.status === "active"
+          ? " active"
+          : props.status === "done"
+          ? " done"
+          : props.status === "upcoming"
+          ? " upcoming"
+          : "") +
+        (props.shape === "hexa"
+          ? " Hexagon"
+          : props.shape === "octa"
+          ? " Octagon"
+          : props.shape === "deca"
+          ? " Decagon"
+          : "")
+      }
+      style={props.style}
+    >
+      {polys}
+      <span>{props.inner}</span>
+      <div class="glow"></div>
     </div>
   );
 }
@@ -81,7 +78,6 @@ function Courses() {
         <StartingPoint shape={v.shape} style={{ top: "50%", left: "50px" }} />
       ) : (
         <Course
-          subject={k}
           shape={v.shape}
           status={v.status}
           tier={v.tier}
